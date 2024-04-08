@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interview</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class='main-head'>
+		<h1>Am I Junior?</h1>
+		<button class='btn'>Check it!</button>
+	</div>
+
+	<div class="test hide">
+		<div class="quiz">
+			<div class='quiz-header' id='header'>
+				<h2 class='title'>Loading the question...</h2>
+
+				<!-- Результаты викторины -->
+				<h2 class="title">%title%</h2>
+				<h3 class="summary">%message%</h3>
+				<p class="result">%result%</p>
+			</div>
+			
+			<ul class='quiz-list' id='list'>
+				<li>
+					<label>
+						<input type="radio" class='answer' name='answer'>
+						<span>Answer...</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" class='answer' name='answer'>
+						<span>Answer...</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" class='answer' name='answer'>
+						<span>Answer...</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" class='answer' name='answer'>
+						<span>Answer...</span>
+					</label>
+				</li>
+			</ul>
+			<div class="bg-submit">
+				<button class='quiz-submit' id='submit'>Confirm</button>
+			</div>
+		</div>
+	</div>
+	<script src='script.js'></script>
+</body>
+
+</html>
