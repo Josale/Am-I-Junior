@@ -1,0 +1,108 @@
+.container {
+  background-color: #FFF;
+  width: 800px;
+  height: 500px;
+  margin: 120px auto;
+  border-radius: 28px;
+  padding-top: 30px;
+	& > .progressWrapper {
+		width: 730px;
+		height: 3px;
+		background-color: rgb(0, 0, 0, 0.10);
+		margin: auto;
+		& > .progressLine {
+			width: 73px;
+			height: 3px;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+	& > h1 {
+			line-height: 36px;
+			font-size: 24px;
+			font-weight: 600;
+			margin: 46px 0px 0px 33px;
+	}
+	& > button {
+		font-family: 'Poppins', sans-serif;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-top: 25px;
+		margin-right: 20px;
+		width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 14px;
+    background-color: rgba(59, 58, 58, 0.353);
+    cursor: pointer;
+		&:hover {
+			background-color: rgba(59, 58, 58, 0.553);
+			transition-duration: 0.3s;
+		}
+	}
+}
+
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+	& > label {
+		display: flex;
+		gap: 14px;
+		line-height: 24px;
+		font-size: 16px;
+		font-weight: 500;
+		margin: 30px 0px 0px 33px;
+		margin-top: 10px;
+		& > input[type="radio"] {
+			display: none;
+		}
+		& > .radio {
+			display: inline-block;
+			text-align: center;
+			line-height: 22px;
+			width: 22px;
+			height: 22px;
+			border-radius: 31px;
+			background-color: rgb(0, 0, 0, 0.12);
+			cursor: pointer;
+		}
+	}
+}
+
+input[type="radio"]:checked + .radio::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 48px;
+  display: inline-block;
+  align-items: center;
+}
+
+label:not(:first-child) {
+  margin-top: 25px;
+}
+
+label:first-child {
+  margin-top: 40px;
+}
+
+.correct {
+	background-color: rgb(1, 114, 7, 0.20);
+}
+
+.wrong {
+	background-color: rgb(109, 9, 6, 0.20);
+}
+
+.labelWrapper {
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	padding: 10px;
+	height: 20px;
+	width: 730px;
+}
