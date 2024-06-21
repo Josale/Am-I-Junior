@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Header.module.css'
 
 function Header() {
   const [seconds, setSeconds] = useState<number>(600);
-  const [isActive, setIsActive] = useState<boolean>(true); // Таймер активен по умолчанию
+  const [isActive, setIsActive] = useState<boolean>(true); 
+	const navigate = useNavigate();
 
   useEffect(() => {
     let interval = null;
@@ -18,11 +20,19 @@ function Header() {
   }, [isActive, seconds]);
 
   const convertToMinutes = () => {
-    let secondsChange = seconds % 60;
-    let minutes = Math.floor(seconds / 60);
-    let formattedSeconds = secondsChange.toString().padStart(2, '0');
-    return `${minutes}:${formattedSeconds}`;
+		if(seconds <= 0) {
+			navigate('/');
+		} else {
+			let secondsChange = seconds % 60;
+    	let minutes = Math.floor(seconds / 60);
+   		let formattedSeconds = secondsChange.toString().padStart(2, '0');
+    	return `${minutes}:${formattedSeconds}`;
+		}
   };
+
+  const handleClick = () => {
+    navigate('/');
+	}
 
   return (
     <div className={styles.container}>
@@ -35,7 +45,7 @@ function Header() {
           <img src="/src/assets/images/Vector.svg" alt="Clocks" />
           <p>Timeout after {convertToMinutes()}</p>
         </div>
-        <button><img src="/src/assets/images/Union.svg" alt="" /></button>
+        <button onClick={handleClick}><img src="/src/assets/images/Union.svg" alt="" /></button>
       </div>
     </div>
   );
