@@ -1,0 +1,6 @@
+@junApi_HostAddress = http://localhost:5225
+
+GET {{junApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
