@@ -3,7 +3,11 @@ import Header from './Header/Header'
 import Modal from './Modal/Modal'
 import Quiz from './Quiz/Quiz'
 
-function quizApp() {
+type QuizpageProps = {
+	questions: any[];
+}
+
+function quizApp({ questions }: QuizpageProps) {
 	const [modalInfoIsOpen, setModalInfoIsOpen] = useState(false);
 
 	const setFalse = () => {
@@ -23,7 +27,7 @@ function quizApp() {
 			/>
 		}
 		<Header isOpenWarning={setTrue}/>
-		<Quiz />
+		<Quiz questions={ questions }/>
 		</>
 	);
 }
