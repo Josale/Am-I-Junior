@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import { data } from '../../assets/data'
 import styles from './Quiz.module.css'
  
 
@@ -10,7 +9,6 @@ type QuizProps = {
 const Quiz = ({ questions }: QuizProps) => {
 	const [index, setIndex] = useState<number>(0)
 	const [score, setScore] = useState<number>(1)
-	const question = data[index]
   const questionDb = questions[index]
 	const progressLineRef = useRef<HTMLDivElement>(null)
 
