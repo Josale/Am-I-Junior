@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import HomePage from './pages/HomePage/HomePage'
+import HomePage from './components/HomePage/HomePage'
 import QuizPage from './pages/QuizPage/QuizPage'
 import { supabase } from './supabase'
 

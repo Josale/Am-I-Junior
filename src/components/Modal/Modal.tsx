@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './Modal.module.css'
 
-function modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 	const navigate = useNavigate()
 
 	const returnToHome = () => {
@@ -29,4 +29,4 @@ function modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 	)
 }
 
-export default modal
+export default Modal

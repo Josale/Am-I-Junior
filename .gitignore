@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-supabase.ts
+src/supabase.ts
 
 # Editor directories and files
 .vscode/*

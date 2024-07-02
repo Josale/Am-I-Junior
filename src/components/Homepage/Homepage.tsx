@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import styles from './Homepage.module.css'
+import styles from './HomePage.module.css'
 
-function homePage() {
+function HomePage() {
 
 	const navigate = useNavigate();
 
@@ -25,4 +25,4 @@ function homePage() {
 	);
 }
 
-export default homePage;
+export default HomePage;
